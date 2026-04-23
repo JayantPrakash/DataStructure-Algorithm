@@ -30,3 +30,7 @@ root.left.right = TreeNode(5)
 root.right.right = TreeNode(6)     
 
 print(sol.postorderTraversal(root))        
+
+# Time and space complexity
+# T(n) = O(n)
+# S(n) = O(n)

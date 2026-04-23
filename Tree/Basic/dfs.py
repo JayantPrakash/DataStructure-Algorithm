@@ -37,4 +37,6 @@ root.right.right = TreeNode(6)
 
 print(sol.dfs(root))
 
-
+# Time and space complexity
+# T(n) = O(n)
+# S(n) = O(n)
