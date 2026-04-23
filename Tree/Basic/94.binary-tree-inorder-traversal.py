@@ -21,6 +21,7 @@ class Solution:
         res.append(node.val)
         self.inOrderHelper(node.right, res)
 
+
 sol = Solution()
 root = TreeNode(1)
 root.left = TreeNode(2)
@@ -30,3 +31,7 @@ root.left.right = TreeNode(5)
 root.right.right = TreeNode(6)     
 
 print(sol.inorderTraversal(root))        
+
+# Time and space complexity
+# T(n) = O(n)
+# S(n) = O(n)
