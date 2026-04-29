@@ -8,21 +8,21 @@ class TreeNode:
         self.left = left
         self.right = right
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
         result = []
-
-        while root is None:
-            return []
-        
+        if root is None:
+            return result
         q = deque()
         q.append(root)
 
         while len(q) != 0:
             len_q = len(q)
             temp = []
-            for _ in range(len(q)):
+
+            for _ in range(len_q):
                 node = q.popleft()
                 temp.append(node.val)
+
                 if node.left is not None:
                     q.append(node.left)
 
@@ -30,6 +30,9 @@ class Solution:
                     q.append(node.right)
 
             result.append(temp)
+
+        result.reverse()
+
         return result
 
 sol = Solution()
@@ -40,8 +43,12 @@ root.left.left = TreeNode(4)
 root.left.right = TreeNode(5)
 root.right.right = TreeNode(6)     
 
-print(sol.levelOrder(root))                            
+print(sol.levelOrderBottom(root))                  
+                
+"""
+Time and space complexity
+T(n) = O(n)
+S(n) = O(n)
 
-# Time and space complexity
-# T(n) = O(n)
-# S(n) = O(n)
+Pattern - BFS    
+"""        
