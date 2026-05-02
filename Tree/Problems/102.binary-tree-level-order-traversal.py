@@ -24,8 +24,11 @@ class Solution:
                 node = q.popleft()
                 temp.append(node.val)
 
-                for child in node.children:
-                    q.append(child)
+                if node.left is not None:
+                    q.append(node.left)
+
+                if node.right is not None:
+                    q.append(node.right)
 
             result.append(temp)
         return result       
