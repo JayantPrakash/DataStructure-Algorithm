@@ -18,7 +18,7 @@ print(sol.majorityElement(nums = [3,2,3]))
 T(n) = O(n)
 S(n) = O(n)
 
-Here, the edge case is when max no of majority element is 1, so check if it max for case
+Here, the edge case is when max no of majority element is 1, so check if it is max for edge case
 when majority element frequency is 1
 """
  
